@@ -1,40 +1,36 @@
-# JSL02 Challenge – Solution Code
+# JSL03 Challenge – 
 
 ## Overview
 
-This repository provides the **official solution code for the JSL02 challenge**. It is meant to help students verify their understanding of JavaScript fundamentals, particularly **user input validation**, **conditional logic**, and **basic output to the console**.
+This project is a simple interactive  JavaScript-based code that **prompt user to enter tasks** and the tasks will have related data stored in an object which is under an array such as (Title, Description, Status). The main purpose of this project is to show the understanding of **user input validation**, **conditional logic**, and **basic output to the console with objects in array**.
 
-Students should use this solution to:
 
-- Review their approach to handling user input via `prompt()`
-- Compare logic used for validating task statuses (`todo`, `doing`, `done`)
-- Understand how to handle multiple conditional outputs
-- Improve their code readability and structure before continuing to **JSL03**
-
-## Features Covered
+## Key Features 
 
 The solution demonstrates how to:
 
-- Prompt the user for **titles**, **descriptions**, and **status** of two tasks
+- Prompt the user for **titles**, **descriptions**, and **status**.
+- The user must to be able to add up to 3 new tasks in the console to the existing task array so that my board doesn’t become overloaded with too many tasks.			 
 - Validate the entered status to ensure it's one of the allowed options
-- Display a **summary in the console** if a task is marked `"done"`
-- Log a motivational message if **neither** task is completed
+- Display only tasks with the status "done" logged in the console as an array, with a clear "Completed Tasks" label, so that It can easy to check which tasks have been completed.			
+- Display  all tasks logged in the console as an array, with a clear label, so that it's easy to review everything added to the board.			
+ 
 
 ## Structure
 
 The project includes:
 
-- ✅ Interactive JavaScript to collect and validate user input
+- ✅ Interactive JavaScript to collect, store and validate user input.
 - 🧠 Clear loops for input validation
-- 🔍 Simple logic that checks and logs completion status
-- 💬 Console messages to give meaningful feedback to the user
+- 🔍 Simple logic that checks **all task** and **completed tasks** status and store them accordingly
 
-## How to Use This Solution
+
+## How to run the code
 
 1. Open the project folder with **Live Server** in VS Code, then open your browser's **developer console** to view the outputs.
-2. Compare the input handling, validation, and logging logic to your own implementation.
+2. Compare the tasks and check which one are completed from all the task the you enterd
 3. Reflect on any areas where your code could be **cleaner**, **more robust**, or **easier to read**.
-4. Make necessary improvements before continuing to JSL03.
+
 
 ---
 
