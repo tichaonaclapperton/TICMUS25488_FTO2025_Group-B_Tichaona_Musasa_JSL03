@@ -1,6 +1,32 @@
+// ******** thats the 3 user task that i was given as starter code *******
+
+const initialTasks = [
+	{
+		id: 1,
+		title: "Launch Epic Career",
+		description: "Create a killer Resume",
+		Status: "todo",
+	},
+	{
+		id: 2,
+		title: "Master JavaScript",
+		description: "Get comfortable with the fundamentals",
+		Status: "doing",
+	},
+	{
+		id: 3,
+		title: "Contribute to Open Source Projects",
+		description:
+			"Gain practical experience and collaborate with others in the software development community",
+		Status: "done",
+	},
+];
+
+
+
 // Ask the user for the title and description of task 1
-const task1Title = prompt("Enter task 1 title:");
-const task1Description = prompt("Enter task 1 description:");
+// const task1Title = prompt("Enter task 1 title:");
+
 
 // Ask for the status of task 1 and convert it to lowercase
 let task1Status = prompt(
