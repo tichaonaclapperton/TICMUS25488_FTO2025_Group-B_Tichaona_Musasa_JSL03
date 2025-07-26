@@ -28,9 +28,9 @@ for (let i = 4; i < 7; i++) {
 	const taskId = `${i}`;
 	const taskTitle = prompt(`Enter task ${i} title:`);
 	const taskDescription = prompt(`Enter task ${i} description:`);
-  const taskStatus = prompt(`Enter task ${i} Status:`);
-	
-// ********* Initialising object keys to the values which are the user input and add it the initialTasks array ******
+	const taskStatus = prompt(`Enter task ${i} Status:`);
+
+	// ********* Initialising object keys to the values which are the user input and add it the initialTasks array ******
 	let task = {
 		id: Number(taskId),
 		title: taskTitle,
@@ -40,12 +40,17 @@ for (let i = 4; i < 7; i++) {
 
 	initialTasks.push(task);
 
-  // ********  Keep asking until the user enters a valid status for task **********
+	// ********  Keep asking until the user enters a valid status for task **********
 
-  while (taskStatus !== 'done' && taskStatus !== 'doing' && taskStatus !== 'todo') {
-    alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
-    taskStatus = prompt(`Enter task ${i} status(todo,doing,done):`).toLowerCase();
-  }
+	while (
+		taskStatus !== "done" &&
+		taskStatus !== "doing" &&
+		taskStatus !== "todo"
+	) {
+		alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+		taskStatus = prompt(
+			`Enter task ${i} status(todo,doing,done):`
+		).toLowerCase();
 
 }
 
@@ -55,16 +60,13 @@ alert(
 	"There are enough tasks on your board, please check them in the console."
 );
 
-// *******Function to Filter all done statuses and store it in commpletedTasks********
+// *******Function to Filter all done statuses and store it in commpletedTasks*******
 
-
-function filterDoneStatus (initialTasks) {
-  return  initialTasks.filter(task => task.Status === 'done');
+function filterDoneStatus(initialTasks) {
+	return initialTasks.filter((task) => task.Status === "done");
 }
 
-let commpletedTasks = filterDoneStatus(initialTasks)
+let commpletedTasks = filterDoneStatus(initialTasks);
 
-console.log('completed tasks:')
-console.log(commpletedTasks)
-
-
+console.log("completed tasks:");
+console.log(commpletedTasks);
