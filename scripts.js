@@ -22,6 +22,24 @@ const initialTasks = [
 	},
 ];
 
+// ********* This loop makes sure that the user tasks starts from 4 up to 6 then it breaks out of the loop *******
+
+for (let i = 4; i < 7; i++) {
+	const taskId = `${i}`;
+	const taskTitle = prompt(`Enter task ${i} title:`);
+	const taskDescription = prompt(`Enter task ${i} description:`);
+  let taskStatus = prompt(`Enter task ${i} Status:`);
+	
+// ********* I am initialising object keys to the values which are the user input and add it the initialTasks array ******
+	let task = {
+		id: Number(taskId),
+		title: taskTitle,
+		description: taskDescription,
+		Status: taskStatus,
+	};
+
+	initialTasks.push(task);
+
 
 
 // Ask the user for the title and description of task 1
