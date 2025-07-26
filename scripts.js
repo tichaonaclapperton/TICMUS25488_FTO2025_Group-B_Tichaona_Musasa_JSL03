@@ -30,7 +30,7 @@ for (let i = 4; i < 7; i++) {
 	const taskDescription = prompt(`Enter task ${i} description:`);
   let taskStatus = prompt(`Enter task ${i} Status:`);
 	
-// ********* I am initialising object keys to the values which are the user input and add it the initialTasks array ******
+// ********* Initialising object keys to the values which are the user input and add it the initialTasks array ******
 	let task = {
 		id: Number(taskId),
 		title: taskTitle,
@@ -40,58 +40,31 @@ for (let i = 4; i < 7; i++) {
 
 	initialTasks.push(task);
 
+  // ********  Keep asking until the user enters a valid status for task **********
 
+  while (taskStatus !== 'done' && taskStatus !== 'doing' && taskStatus !== 'todo') {
+    alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+    taskStatus = prompt(`Enter task ${i} status(todo,doing,done):`).toLowerCase();
+  }
 
-// Ask the user for the title and description of task 1
-// const task1Title = prompt("Enter task 1 title:");
-
-
-// Ask for the status of task 1 and convert it to lowercase
-let task1Status = prompt(
-  "Enter task 1 status (todo, doing, done):"
-).toLowerCase();
-
-// Keep asking until the user enters a valid status for task 1
-while (
-  task1Status !== "todo" &&
-  task1Status !== "doing" &&
-  task1Status !== "done"
-) {
-  alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
-  task1Status = prompt(
-    "Enter task 1 status (todo, doing, done):"
-  ).toLowerCase();
 }
 
-// Repeat the same steps for task 2
-const task2Title = prompt("Enter task 2 title:");
-const task2Description = prompt("Enter task 2 description:");
-let task2Status = prompt(
-  "Enter task 2 status (todo, doing, done):"
-).toLowerCase();
+console.log("All taskes:");
+console.log(initialTasks);
+alert(
+	"There are enough tasks on your board, please check them in the console."
+);
 
-while (
-  task2Status !== "todo" &&
-  task2Status !== "doing" &&
-  task2Status !== "done"
-) {
-  alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
-  task2Status = prompt(
-    "Enter task 2 status (todo, doing, done):"
-  ).toLowerCase();
+// *******Function to Filter all done statuses and store it in commpletedTasks********
+
+
+function filterDoneStatus (initialTasks) {
+  return  initialTasks.filter(task => task.Status === 'done');
 }
 
-// Check if task1 is done, and log it if so
-if (task1Status === "done") {
-  console.log("Title: " + task1Title + ", status: " + task1Status);
-}
+let commpletedTasks = filterDoneStatus(initialTasks)
 
-// Check if task2 is done, and log it if so
-if (task2Status === "done") {
-  console.log("Title: " + task2Title + ", status: " + task2Status);
-}
+console.log('completed tasks:')
+console.log(commpletedTasks)
 
-// If neither task1 nor task2 is done, show a motivational message
-if (task1Status !== "done" && task2Status !== "done") {
-  console.log("No tasks completed, let's get to work!");
-}
+
