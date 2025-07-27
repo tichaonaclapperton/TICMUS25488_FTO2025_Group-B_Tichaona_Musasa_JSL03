@@ -28,7 +28,7 @@ for (let i = 4; i < 7; i++) {
 	const taskId = `${i}`;
 	const taskTitle = prompt(`Enter task ${i} title:`);
 	const taskDescription = prompt(`Enter task ${i} description:`);
-	const taskStatus = prompt(`Enter task ${i} Status:`);
+	let taskStatus = prompt(`Enter task ${i} Status:`);
 
 	// ********* Initialising object keys to the values which are the user input and add it the initialTasks array ******
 	let task = {
@@ -51,7 +51,7 @@ for (let i = 4; i < 7; i++) {
 		taskStatus = prompt(
 			`Enter task ${i} status(todo,doing,done):`
 		).toLowerCase();
-
+	}
 }
 
 console.log("All taskes:");
